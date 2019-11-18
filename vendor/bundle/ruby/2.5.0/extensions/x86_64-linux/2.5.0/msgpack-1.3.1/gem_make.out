@@ -1,0 +1,54 @@
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/msgpack-1.3.1/ext/msgpack
+/home/vitalina/.rvm/rubies/ruby-2.5.0/bin/ruby -r ./siteconf20191114-18000-1vc8cwb.rb extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... yes
+checking for rb_str_replace() in ruby.h... yes
+checking for rb_intern_str() in ruby.h... yes
+checking for rb_sym2str() in ruby.h... yes
+checking for rb_str_intern() in ruby.h... yes
+checking for rb_block_lambda() in ruby.h... yes
+checking for rb_hash_dup() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+creating Makefile
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/msgpack-1.3.1/ext/msgpack
+make "DESTDIR=" clean
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/msgpack-1.3.1/ext/msgpack
+make "DESTDIR="
+compiling buffer.c
+compiling buffer_class.c
+compiling extension_value_class.c
+compiling factory_class.c
+compiling packer.c
+У файлі, який включено у packer.h:22,
+                 з packer.c:19:
+packer.c: У функції ‘msgpack_packer_write_other_value’:
+packer_ext_registry.h:129:9: попередження: ‘lookup_class’ може бути використано без ініціалізації у цій функції [-Wmaybe-uninitialized]
+  129 |         rb_hash_aset(pkrg->cache, lookup_class, superclass_type);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+packer_ext_registry.h:85:11: зауваження: ‘lookup_class’ було оголошено тут:
+   85 |     VALUE lookup_class;
+      |           ^~~~~~~~~~~~
+packer.c: На верхньому рівні:
+cc1: попередження: unrecognized command line option ‘-Wno-self-assign’
+cc1: попередження: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: попередження: unrecognized command line option ‘-Wno-parentheses-equality’
+compiling packer_class.c
+compiling packer_ext_registry.c
+compiling rbinit.c
+compiling rmem.c
+compiling unpacker.c
+compiling unpacker_class.c
+unpacker_class.c:219:14: попередження: ‘Unpacker_peek_next_type’ defined but not used [-Wunused-function]
+  219 | static VALUE Unpacker_peek_next_type(VALUE self)
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: попередження: unrecognized command line option ‘-Wno-self-assign’
+cc1: попередження: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: попередження: unrecognized command line option ‘-Wno-parentheses-equality’
+compiling unpacker_ext_registry.c
+linking shared-object msgpack/msgpack.so
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/msgpack-1.3.1/ext/msgpack
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20191114-18000-9l2sl4/msgpack

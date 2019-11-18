@@ -1,0 +1,438 @@
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+/home/vitalina/.rvm/rubies/ruby-2.5.0/bin/ruby -r ./siteconf20191114-18000-2qq7hp.rb extconf.rb
+checking for unistd.h... yes
+checking for linux/aio_abi.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+compiling monitor.c
+compiling nio4r_ext.c
+У файлі, який включено у nio4r_ext.c:7:
+../libev/ev.c:511:48: попередження: "/*" всередині коментаря [-Wcomment]
+  511 | /*#define MIN_INTERVAL  0.00000095367431640625 /* 1/2**20, good till 2200 */
+      |                                                 
+У файлі, який включено у nio4r_ext.c:7:
+../libev/ev.c: У функції ‘ecb_binary32_to_binary16’:
+../libev/ev.c:1302:13: попередження: порівняння цілочисельних виразів невід'ємного і різнознакового діапазонів: ‘unsigned int’ і ‘int’ [-Wsign-compare]
+ 1302 |       if (e < (14 - 24)) /* might not be sharp, but is good enough */
+      |             ^
+У файлі, який включено у nio4r_ext.c:7:
+../libev/ev.c: На верхньому рівні:
+../libev/ev.c:1867:31: попередження: ‘ev_default_loop_ptr’ initialized and declared ‘extern’
+ 1867 |   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+      |                               ^~~~~~~~~~~~~~~~~~~
+../libev/ev.c: У функції ‘ev_time’:
+../libev/ev.c:1907:3: попередження: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1907 |   struct timeval tv;
+      |   ^~~~~~
+../libev/ev.c: У функції ‘array_nextsize’:
+../libev/ev.c:1978:19: попередження: порівняння цілочисельних виразів невід'ємного і різнознакового діапазонів: ‘int’ і ‘long unsigned int’ [-Wsign-compare]
+ 1978 |   if (elem * ncur > MALLOC_ROUND - sizeof (void *) * 4)
+      |                   ^
+У файлі, який включено у ../libev/ev.c:202,
+                 з nio4r_ext.c:7:
+../libev/ev_epoll.c: У функції ‘epoll_modify’:
+../libev/ev_epoll.c:134:69: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  134 |     assert (("libev: I/O watcher with invalid fd found in epoll_ctl", errno != EBADF && errno != ELOOP && errno != EINVAL));
+      |                                                                     ^
+../libev/ev_epoll.c:134:69: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  134 |     assert (("libev: I/O watcher with invalid fd found in epoll_ctl", errno != EBADF && errno != ELOOP && errno != EINVAL));
+      |                                                                     ^
+У файлі, який включено у ../libev/ev.c:2745,
+                 з nio4r_ext.c:7:
+../libev/ev_linuxaio.c: У функції ‘linuxaio_modify’:
+../libev/ev_linuxaio.c:289:3: попередження: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  289 |   ANIOCBP iocb = linuxaio_iocbps [fd];
+      |   ^~~~~~~
+У файлі, який включено у ../libev/ev.c:202,
+                 з nio4r_ext.c:7:
+../libev/ev_linuxaio.c:304:61: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  304 |       assert (("libev: linuxaio unexpected io_cancel failed", errno == EINPROGRESS));
+      |                                                             ^
+../libev/ev_linuxaio.c:304:61: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  304 |       assert (("libev: linuxaio unexpected io_cancel failed", errno == EINPROGRESS));
+      |                                                             ^
+../libev/ev_linuxaio.c: У функції ‘linuxaio_parse_events’:
+../libev/ev_linuxaio.c:344:50: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  344 |       assert (("libev: iocb fd must be in-bounds", fd >= 0 && fd < anfdmax));
+      |                                                  ^
+../libev/ev_linuxaio.c:344:50: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  344 |       assert (("libev: iocb fd must be in-bounds", fd >= 0 && fd < anfdmax));
+      |                                                  ^
+../libev/ev_linuxaio.c: У функції ‘linuxaio_poll’:
+../libev/ev_linuxaio.c:553:57: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  553 |             assert (("libev: event loop rejected bad fd", errno != EBADF));
+      |                                                         ^
+../libev/ev_linuxaio.c:553:57: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  553 |             assert (("libev: event loop rejected bad fd", errno != EBADF));
+      |                                                         ^
+У файлі, який включено у libev.h:9,
+                 з nio4r.h:11,
+                 з nio4r_ext.c:6:
+../libev/ev_linuxaio.c: У функції ‘linuxaio_init’:
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:689:27: зауваження: у визначенні макросу ‘ev_init’
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |                           ^~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:690:27: зауваження: у визначенні макросу ‘ev_init’
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |                           ^~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:734:73: зауваження: у визначенні макросу ‘ev_set_priority’
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                                                         ^~
+../libev/ev.h:709:51: зауваження: у розгортанні макросу ‘ev_init’
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:726:47: зауваження: у визначенні макросу ‘ev_cb_’
+  726 | #define ev_cb_(ev)                           (ev)->cb /* rw */
+      |                                               ^~
+../libev/ev.h:692:3: зауваження: у розгортанні макросу ‘ev_set_cb’
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: зауваження: у розгортанні макросу ‘ev_init’
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:740:94: зауваження: у визначенні макросу ‘ev_set_cb’
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                                              ^~
+../libev/ev.h:709:51: зауваження: у розгортанні макросу ‘ev_init’
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:726:47: зауваження: у визначенні макросу ‘ev_cb_’
+  726 | #define ev_cb_(ev)                           (ev)->cb /* rw */
+      |                                               ^~
+../libev/ev.h:692:3: зауваження: у розгортанні макросу ‘ev_set_cb’
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: зауваження: у розгортанні макросу ‘ev_init’
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:726:47: зауваження: у визначенні макросу ‘ev_cb_’
+  726 | #define ev_cb_(ev)                           (ev)->cb /* rw */
+      |                                               ^~
+../libev/ev.h:692:3: зауваження: у розгортанні макросу ‘ev_set_cb’
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: зауваження: у розгортанні макросу ‘ev_init’
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:52: зауваження: у визначенні макросу ‘ev_io_set’
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                    ^~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:70: зауваження: у визначенні макросу ‘ev_io_set’
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                                      ^~
+../libev/ev_linuxaio.c:592:3: зауваження: у розгортанні макросу ‘ev_io_init’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: зауваження: у розгортанні макросу ‘EV_A_’
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev_linuxaio.c: У функції ‘linuxaio_fork’:
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:52: зауваження: у визначенні макросу ‘ev_io_set’
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                    ^~
+../libev/ev_linuxaio.c:636:16: зауваження: у розгортанні макросу ‘EV_A_’
+  636 |   ev_io_set   (EV_A_ &linuxaio_epoll_w, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:70: зауваження: у визначенні макросу ‘ev_io_set’
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                                      ^~
+../libev/ev_linuxaio.c:636:16: зауваження: у розгортанні макросу ‘EV_A_’
+  636 |   ev_io_set   (EV_A_ &linuxaio_epoll_w, backend_fd, EV_READ);
+      |                ^~~~~
+У файлі, який включено у ../libev/ev.c:202,
+                 з nio4r_ext.c:7:
+../libev/ev_poll.c: У функції ‘poll_poll’:
+../libev/ev_poll.c:113:75: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  113 |         assert (("libev: poll returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+      |                                                                           ^
+../libev/ev_poll.c:113:75: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  113 |         assert (("libev: poll returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+      |                                                                           ^
+../libev/ev_poll.c:121:68: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  121 |                 assert (("libev: poll found invalid fd in poll set", 0));
+      |                                                                    ^
+../libev/ev_poll.c:121:68: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+  121 |                 assert (("libev: poll found invalid fd in poll set", 0));
+      |                                                                    ^
+../libev/ev.c: У функції ‘verify_watcher’:
+../libev/ev.c:3181:49: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3181 |   assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+      |                                                 ^
+../libev/ev.c:3181:49: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3181 |   assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+      |                                                 ^
+../libev/ev.c:3184:59: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3184 |     assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+      |                                                           ^
+../libev/ev.c:3184:59: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3184 |     assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+      |                                                           ^
+../libev/ev.c: У функції ‘verify_heap’:
+../libev/ev.c:3195:54: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3195 |       assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+      |                                                      ^
+../libev/ev.c:3195:54: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3195 |       assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+      |                                                      ^
+../libev/ev.c:3196:48: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3196 |       assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+      |                                                ^
+../libev/ev.c:3196:48: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3196 |       assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+      |                                                ^
+../libev/ev.c:3197:47: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3197 |       assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+      |                                               ^
+../libev/ev.c:3197:47: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3197 |       assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+      |                                               ^
+../libev/ev.c: У функції ‘array_verify’:
+../libev/ev.c:3209:46: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3209 |       assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+      |                                              ^
+../libev/ev.c:3209:46: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3209 |       assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+      |                                              ^
+../libev/ev.c: У функції ‘ev_verify’:
+../libev/ev.c:3227:47: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3227 |     assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+      |                                               ^
+../libev/ev.c:3227:47: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3227 |     assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+      |                                               ^
+../libev/ev.c:3240:64: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3240 |               assert (("libev: io watcher list contains a loop", w != w2));
+      |                                                                ^
+../libev/ev.c:3240:64: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3240 |               assert (("libev: io watcher list contains a loop", w != w2));
+      |                                                                ^
+../libev/ev.c:3244:61: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3244 |           assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+      |                                                             ^
+../libev/ev.c:3244:61: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3244 |           assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+      |                                                             ^
+../libev/ev.c:3245:65: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3245 |           assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+      |                                                                 ^
+../libev/ev.c:3245:65: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3245 |           assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+      |                                                                 ^
+../libev/ev.c: У функції ‘timers_reify’:
+../libev/ev.c:3431:93: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3431 |               assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+      |                                                                                             ^
+../libev/ev.c:3431:93: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3431 |               assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+      |                                                                                             ^
+../libev/ev.c: У функції ‘periodics_reify’:
+../libev/ev.c:3494:90: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3494 |               assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+      |                                                                                          ^
+../libev/ev.c:3494:90: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3494 |               assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+      |                                                                                          ^
+../libev/ev.c: У функції ‘ev_run’:
+../libev/ev.c:3656:62: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3656 |   assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+      |                                                              ^
+../libev/ev.c:3656:62: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3656 |   assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+      |                                                              ^
+../libev/ev.c:3824:70: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3824 |             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+      |                                                                      ^
+../libev/ev.c:3824:70: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3824 |             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+      |                                                                      ^
+../libev/ev.c: У функції ‘ev_io_start’:
+../libev/ev.c:3999:56: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3999 |   assert (("libev: ev_io_start called with negative fd", fd >= 0));
+      |                                                        ^
+../libev/ev.c:3999:56: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 3999 |   assert (("libev: ev_io_start called with negative fd", fd >= 0));
+      |                                                        ^
+../libev/ev.c:4000:63: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4000 |   assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+      |                                                               ^
+../libev/ev.c:4000:63: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4000 |   assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+      |                                                               ^
+../libev/ev.c:4012:62: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4012 |   assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+      |                                                              ^
+../libev/ev.c:4012:62: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4012 |   assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+      |                                                              ^
+../libev/ev.c: У функції ‘ev_io_stop’:
+../libev/ev.c:4028:88: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4028 |   assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+      |                                                                                        ^
+../libev/ev.c:4028:88: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4028 |   assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+      |                                                                                        ^
+../libev/ev.c: У функції ‘ev_timer_start’:
+../libev/ev.c:4052:75: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4052 |   assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+      |                                                                           ^
+../libev/ev.c:4052:75: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4052 |   assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+      |                                                                           ^
+../libev/ev.c: У функції ‘ev_timer_stop’:
+../libev/ev.c:4081:53: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4081 |     assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+      |                                                     ^
+../libev/ev.c:4081:53: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4081 |     assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+      |                                                     ^
+../libev/ev.c: У функції ‘ev_periodic_start’:
+../libev/ev.c:4145:78: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4145 |       assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+      |                                                                              ^
+../libev/ev.c:4145:78: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4145 |       assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+      |                                                                              ^
+../libev/ev.c: У функції ‘ev_periodic_stop’:
+../libev/ev.c:4178:56: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4178 |     assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+      |                                                        ^
+../libev/ev.c:4178:56: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4178 |     assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+      |                                                        ^
+../libev/ev.c: У функції ‘ev_signal_start’:
+../libev/ev.c:4217:70: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4217 |   assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+      |                                                                      ^
+../libev/ev.c:4217:70: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4217 |   assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+      |                                                                      ^
+../libev/ev.c:4220:73: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4220 |   assert (("libev: a signal must not be attached to two different loops",
+      |                                                                         ^
+../libev/ev.c:4220:73: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4220 |   assert (("libev: a signal must not be attached to two different loops",
+      |                                                                         ^
+../libev/ev.c: У функції ‘ev_child_start’:
+../libev/ev.c:4339:74: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4339 |   assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+      |                                                                          ^
+../libev/ev.c:4339:74: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4339 |   assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+      |                                                                          ^
+../libev/ev.c: У функції ‘ev_embed_start’:
+../libev/ev.c:4924:60: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4924 |     assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+      |                                                            ^
+../libev/ev.c:4924:60: попередження: left-hand operand of comma expression has no effect [-Wunused-value]
+ 4924 |     assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+      |                                                            ^
+У файлі, який включено у nio4r_ext.c:7:
+../libev/ev.c: На верхньому рівні:
+../libev/ev.c:5268:27: попередження: "/*" всередині коментаря [-Wcomment]
+ 5268 | /* EV_STAT     0x00001000 /* stat data changed */
+      |                            
+../libev/ev.c:5269:27: попередження: "/*" всередині коментаря [-Wcomment]
+ 5269 | /* EV_EMBED    0x00010000 /* embedded event loop needs sweep */
+      |                            
+cc1: попередження: unrecognized command line option ‘-Wno-self-assign’
+cc1: попередження: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: попередження: unrecognized command line option ‘-Wno-parentheses-equality’
+compiling selector.c
+linking shared-object nio4r_ext.so
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.2/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20191114-18000-13eesla

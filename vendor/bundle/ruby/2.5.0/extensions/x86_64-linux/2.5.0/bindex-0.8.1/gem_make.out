@@ -1,0 +1,15 @@
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/home/vitalina/.rvm/rubies/ruby-2.5.0/bin/ruby -r ./siteconf20191114-18000-ynkbda.rb extconf.rb
+creating Makefile
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/vitalina/r/cv/SearchProj/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20191114-18000-gymxup/skiptrace/internal
