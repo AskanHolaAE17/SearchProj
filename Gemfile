@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+
 gem 'rubocop'
 
 group :development, :test do

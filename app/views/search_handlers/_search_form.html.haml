@@ -1,0 +1,35 @@
+= form_with url: '/match' do  
+  .form-group
+    = text_field_tag(:name)
+  
+  .form-group
+    = radio_button_tag :search_style, "match", checked: true
+    = label_tag :search_style_match, "Точна вiдповiднiсть"
+    %br/
+    
+    = radio_button_tag :search_style, "by_lang"
+    = label_tag :search_style_by_lang, "Шукати за мовою програмування"    
+    %br/
+    
+    = radio_button_tag :search_style, "by_type"
+    = label_tag :search_style_by_type, "Шукати за типом мови"  
+    %br/
+    
+    = radio_button_tag :search_style, "by_designer"
+    = label_tag :search_style_by_designer, "Шукати за дизайнером"  
+    %br/
+    
+    = radio_button_tag :search_style, "negative"
+    = label_tag :search_style_by_negative, "Вiд`ємне значення"
+                  
+  
+  .form-group
+    = submit_tag "Do", class: 'btn btn-success'
+  
+  .form-group
+    = text_area_tag :data, @result, id: 'result_text_area', size: "50x2", readonly: 'readonly'
+      
+  .form-group
+    JSON данi:
+    %br/
+    = text_area_tag :data, @json_pretty, id: 'search_text_area', size: "50x10", readonly: 'readonly'
