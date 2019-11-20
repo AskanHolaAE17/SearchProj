@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-class MatchService     
+# You can find languages by match precision of the field
+class FindByMatchService     
 
   def self.call(collection, match_phrase)
     res = []
-
-    match_phrase.downcase!
 
     if (1..3).include?(match_phrase.split(' ').count)
 
@@ -19,7 +18,7 @@ class MatchService
 
         end
       end
-      res.uniq.join(', ')
+      res.uniq
     else 
       'Wrong statement.' 
     end            

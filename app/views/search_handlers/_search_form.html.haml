@@ -1,35 +1,50 @@
 = form_with url: '/match', remote: true do  
   .form-group
-    = text_field_tag(:phrase)
+    = text_field_tag :phrase, nil, id: 'phrase_text_field'
   
   .form-group
     = radio_button_tag :search_style, "match", checked: true
-    = label_tag :search_style_match, "Точна вiдповiднiсть"
+    = label_tag :search_style_match do
+      Точна вiдповiднiсть
+      %span{id: 'match_text_example' , class: 'text-success link_imitation', onclick: 'changeText("Thomas Eugene")'}
+        (Приклад)
     %br/
     
     = radio_button_tag :search_style, "by_lang"
-    = label_tag :search_style_by_lang, "Шукати за мовою програмування"    
+    = label_tag :search_style_by_lang do    
+      Шукати за мовою програмування    
+      %span{id: 'match_text_example' , class: 'text-success link_imitation', onclick: 'changeText("Lisp Common")'}
+        (Приклад)    
     %br/
     
     = radio_button_tag :search_style, "by_type"
-    = label_tag :search_style_by_type, "Шукати за типом мови"  
+    = label_tag :search_style_by_type do    
+      Шукати за типом мови
+      %span{id: 'match_text_example' , class: 'text-success link_imitation', onclick: 'changeText("array")'}
+        (Приклад)     
     %br/
     
     = radio_button_tag :search_style, "by_designer"
-    = label_tag :search_style_by_designer, "Шукати за дизайнером"  
+    = label_tag :search_style_by_designer do    
+      Шукати за дизайнером
+      %span{id: 'match_text_example' , class: 'text-success link_imitation', onclick: 'changeText("Thomas Kurtz")'}
+        (Приклад)    
     %br/
     
     = radio_button_tag :search_style, "negative"
-    = label_tag :search_style_by_negative, "Вiд`ємне значення"
+    = label_tag :search_style_negative do    
+      Вiд`ємне значення
+      %span{id: 'match_text_example' , class: 'text-success link_imitation', onclick: 'changeText("John -array")'}
+        (Приклад)    
                   
   
   .form-group
-    = submit_tag "Do", class: 'btn btn-success'
+    = submit_tag "Шукати", class: 'btn btn-success'
   
   .form-group
-    = text_area_tag :result, @result, id: 'result_text_area', size: "50x3", readonly: 'readonly', class: "#{@class}"
+    = text_area_tag :result, @result, id: 'result_text_area', size: "50x3", readonly: 'readonly'
       
   .form-group
-    JSON данi:
+    JSON данi для пошуку:
     %br/
     = text_area_tag :json, @json_pretty, id: 'search_text_area', size: "50x10", readonly: 'readonly'

@@ -1,3 +1,15 @@
-// Place all the styles related to the SearchHandlers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-group A {
+  text-decoration: none !important;
+}
+
+.link_imitation {
+  cursor: pointer;
+}
+
+.link_imitation:hover {
+  color: #1e7e34 !important;
+}
+
+.link_imitation:active {
+  color: #28a745 !important;
+}
