@@ -1,6 +1,6 @@
-= form_with url: '/match' do  
+= form_with url: '/match', remote: true do  
   .form-group
-    = text_field_tag(:name)
+    = text_field_tag(:phrase)
   
   .form-group
     = radio_button_tag :search_style, "match", checked: true
@@ -27,9 +27,9 @@
     = submit_tag "Do", class: 'btn btn-success'
   
   .form-group
-    = text_area_tag :data, @result, id: 'result_text_area', size: "50x2", readonly: 'readonly'
+    = text_area_tag :result, @result, id: 'result_text_area', size: "50x3", readonly: 'readonly', class: "#{@class}"
       
   .form-group
     JSON данi:
     %br/
-    = text_area_tag :data, @json_pretty, id: 'search_text_area', size: "50x10", readonly: 'readonly'
+    = text_area_tag :json, @json_pretty, id: 'search_text_area', size: "50x10", readonly: 'readonly'

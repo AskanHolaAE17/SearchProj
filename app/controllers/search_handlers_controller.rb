@@ -7,15 +7,19 @@ class SearchHandlersController < ApplicationController
     @json = JSON.parse(file)
     @json_pretty = JSON.pretty_generate(@json)
     
-    @result = 'Поле для виводу результатiв'
+    @result = 'Поле для виводу результатiв' 
   end
 
   def match 
-    @string = 'string'
+    @class = 'bg-success text-white'
+  
+    @phrase     = params[:phrase]
+    @collection = JSON.parse(params[:json])
         
-    @result = case params['search_style']
+    @result     = case params['search_style']
     when 'match'
-      MatchService.call(@string)
+      # You can find languages by match precision of the field
+      MatchService.call(@collection, @phrase)      
     when 'by_lang'
       #
     when 'by_type'
@@ -25,6 +29,5 @@ class SearchHandlersController < ApplicationController
     when 'negative'
       #                    
     end        
-    redirect_to 'https://google.com.ua/' if @result == 'Match'    
   end  
 end
