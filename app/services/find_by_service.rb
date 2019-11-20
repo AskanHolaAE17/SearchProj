@@ -3,36 +3,26 @@
 # You can find Language by designer, language name or type
 class FindByService     
 
-  def self.call(collection, str, field_name)
-    res = []   
+  def self.call(collection, search_phrase, field_name)
+    resulted_languages = []   
 
-    if (1..3).include?(str.split(' ').count)
-  
-      collection.each do |h|
-        split_part = h["#{field_name}"].downcase.split(',')   
-        split_part = split_part
+    collection.each do |hash_of_data|
+    
+      # Define part for comparing:
+      part_for_comparing = hash_of_data["#{field_name}"].downcase.split(',')   
 
-        split_part.each do |dby|
-
-          pre = dby.downcase.split(' ')
-          dby_variants = "#{pre.join(' ')}" + 
-                  "#{pre[2] if pre[2]} " + 
-                  "#{pre[0]} " + 
-                  "#{pre[1] if pre[1]} "+ 
-                  "#{pre[2] if pre[2]}" + 
-                  "#{pre[1] if pre[1]} " + 
-                  "#{pre[0] if pre[0]} " + 
-                  "#{pre[2] if pre[2]} " + 
-                  "#{pre[1] if pre[1]} " + 
-                  "#{pre[2] if pre[2]} "  + 
-                  "#{pre[0] if pre[0]}"    
-          res << h["Name"] if dby_variants.include? str
-        end
+      part_for_comparing.each do |string_of_current_values|
+        
+        # Array of splitted part for comparing:
+        arr = string_of_current_values.split(' ')
+        variants_for_search = CountVariantsForFindByObject.call(arr)   
+                       
+        # Put the name of current language into resulted array:               
+        resulted_languages << hash_of_data["Name"] if variants_for_search.include? search_phrase
       end
-      res.uniq.join(', ')
-    else 
-      'Wrong statement.' 
-    end    
+    end
+    
+    resulted_languages.uniq.join(', ')  
   end  
-
+  
 end
