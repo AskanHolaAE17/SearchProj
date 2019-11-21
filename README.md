@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application make the incoming data searchable.
 
-Things you may want to cover:
+It is enought to download the application (for example, zip-file),
+unpack, bundle it according to Gemfile and run on your machine.
 
-* Ruby version
+You can enter a part of a word as searching phrase or first name 
+and surname (without a middle name).
 
-* System dependencies
+You can choose preferable option with radio buttons:
+like nagative search or search by language type.
 
-* Configuration
+Please, use "Приклад" button to get the examples of input for the 
+fast interaction with the Searcher.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I used AJAX to show the results of user input and pure JavaScript
+to load the search examples into the search field.

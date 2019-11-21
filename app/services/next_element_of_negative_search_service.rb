@@ -4,7 +4,6 @@
 class NextElementOfNegativeSearchService
 
   def self.call(collection, resulted_languages, current_element_position, minus)
-    puts current_element_position.is_a String
     resulted_languages<<collection[current_element_position]["Name"]
     collection[current_element_position].each do |key, val|      
 
